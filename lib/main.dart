@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Task Mannger",
       // initialRoute: '/',
-      initialRoute: '/login',
+      // initialRoute: '/login',
+      // initialRoute: '/registration',
+      // initialRoute: '/emailVerification',
+      initialRoute: '/setPassword',
       routes: {
         '/':(context)=> splashScreen(),
         '/login':(context)=>loginScreen(),
