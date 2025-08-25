@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       // initialRoute: '/login',
       // initialRoute: '/registration',
       // initialRoute: '/emailVerification',
-      initialRoute: '/setPassword',
+      // initialRoute: '/setPassword',
+      initialRoute: '/pinVerification',
       routes: {
         '/':(context)=> splashScreen(),
         '/login':(context)=>loginScreen(),
