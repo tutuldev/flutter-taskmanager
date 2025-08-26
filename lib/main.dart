@@ -5,6 +5,7 @@ import 'package:taskmannager/screen/onboarding/pinVerificationScreen.dart';
 import 'package:taskmannager/screen/onboarding/registrationScreen.dart';
 import 'package:taskmannager/screen/onboarding/setPasswordScreen.dart';
 import 'package:taskmannager/screen/onboarding/splashScreen.dart';
+import 'package:taskmannager/screen/task/newTaskListScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,18 +19,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Task Mannger",
       // initialRoute: '/',
-      // initialRoute: '/login',
+      initialRoute: '/login',
       // initialRoute: '/registration',
       // initialRoute: '/emailVerification',
       // initialRoute: '/setPassword',
-      initialRoute: '/pinVerification',
+      // initialRoute: '/pinVerification',
       routes: {
         '/':(context)=> splashScreen(),
         '/login':(context)=>loginScreen(),
         '/registration':(context)=>registrationsScreen(),
         '/emailVerification':(context)=>emailVerificationScreen(),
         '/pinVerification':(context)=>pinVerificationScreen(),
-        '/setPassword':(context)=>setPasswordScreen()
+        '/setPassword':(context)=>setPasswordScreen(),
+        '/newTaskList':(context)=>newTaskListScreen()
       },
     );
   }
