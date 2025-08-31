@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../style/style.dart';
+import '../utility/utility.dart';
 
 var BaseURL="https://task.teamrabbil.com/api/v1";
 var RequestHeader={"Content-Type": "application/json"};
@@ -39,6 +40,7 @@ Future<bool> RegistrationRequest (FormValues) async{
 
   if (ResultCode==200 && ResultBody['status']=="success"){
     SuccessToast("Request Success");
+    await WriteUserData(ResultBody);
     return true;
   }
   else{
