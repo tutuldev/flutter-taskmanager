@@ -6,20 +6,31 @@ import 'package:taskmannager/screen/onboarding/registrationScreen.dart';
 import 'package:taskmannager/screen/onboarding/setPasswordScreen.dart';
 import 'package:taskmannager/screen/onboarding/splashScreen.dart';
 import 'package:taskmannager/screen/task/newTaskListScreen.dart';
+import 'package:taskmannager/utility/utility.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  String? token = await ReadUserData('token');
+  if(token==null){
+    runApp( MyApp("/login"));
+  }else{
+
+    runApp( MyApp("/newTaskList"));
+  }
+
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String FirstRoute;
+   MyApp(this.FirstRoute);
+
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Task Mannger",
       // initialRoute: '/',
-      initialRoute: '/login',
+      initialRoute: FirstRoute,
       // initialRoute: '/registration',
       // initialRoute: '/emailVerification',
       // initialRoute: '/setPassword',
