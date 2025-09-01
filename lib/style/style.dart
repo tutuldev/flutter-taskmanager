@@ -41,10 +41,19 @@ TextStyle Head1Text(textColor) {
 }
 TextStyle Head6Text(textColor) {
   return TextStyle(
-  color: textColor,
-  fontSize: 16,
-  fontFamily: 'poppins',
-  fontWeight: FontWeight.w400
+      color: textColor,
+      fontSize: 16,
+      fontFamily: 'poppins',
+      fontWeight: FontWeight.w400
+  );
+}
+
+TextStyle Head7Text(textColor) {
+  return TextStyle(
+      color: textColor,
+      fontSize: 13,
+      fontFamily: 'poppins',
+      fontWeight: FontWeight.w400
   );
 }
 
