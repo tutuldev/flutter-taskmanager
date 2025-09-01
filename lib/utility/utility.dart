@@ -9,3 +9,11 @@ Future<void> WriteUserData(UserData) async {
   await prefs.setString('mobile', UserData['data']['mobile']);
   await prefs.setString('photo', UserData['data']['photo']);
 }
+
+
+Future<String?> ReadUserData(Key) async {
+  final prefs = await SharedPreferences.getInstance();
+  String? mydata = await prefs.getString(Key);
+  return mydata;
+
+}

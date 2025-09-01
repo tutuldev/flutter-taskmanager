@@ -17,6 +17,7 @@ Future<bool> LoginRequest (FormValues) async{
   var ResultBody=json.decode (response.body);
 
   if (ResultCode==200 && ResultBody['status']=="success"){
+    await WriteUserData(ResultBody);
     SuccessToast("Request Success");
     return true;
   }
@@ -40,7 +41,7 @@ Future<bool> RegistrationRequest (FormValues) async{
 
   if (ResultCode==200 && ResultBody['status']=="success"){
     SuccessToast("Request Success");
-    await WriteUserData(ResultBody);
+
     return true;
   }
   else{
